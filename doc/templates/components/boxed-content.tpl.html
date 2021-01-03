@@ -1,0 +1,59 @@
+<!-- shadowed box
+To use this card, insert this component tag in your container file
+     <component name="shadowed-box" shadowed="true" ></component>
+-->
+<style>
+  /* If you use shadowed=true
+  This style will be automatically shadowed in the browser */
+  :host(*) {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px, rgba(228, 228, 234, 0.5) 0px 9px 23px 0px;
+    transition: all 0.3s ease-in-out;
+    width: 90%;
+    margin: 0 auto;
+    min-height: 100%;
+    height: auto;
+    border-radius: 30px;
+    display: block;
+    padding: 2%;
+    background-color: #ffffff;
+  }
+  img {
+    max-width:90%;
+    border-radius: 27px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px, rgba(228, 228, 234, 0.5) 0px 9px 23px 0px;
+    transition: all 0.3s ease-in-out;
+  }
+  img:hover {
+    transform: scale(1.03);
+    box-shadow: rgba(228, 228, 234, 0.56) 0px 22px 32px 0px, rgba(228, 228, 234, 0.64) 0px 9px 28px 0px;
+  }
+
+  a{
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+  p:not(:first-child) {
+    margin: 4% 10%;
+    font-size: medium;
+    display: block;
+  }
+  h1, h2 {
+    margin: 4% 5%;
+  }
+  ul {
+    margin: auto 8%;
+  }
+</style>

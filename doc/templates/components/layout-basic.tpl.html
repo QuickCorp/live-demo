@@ -1,0 +1,51 @@
+<style>
+  /*
+  * Main Layout Styles
+  */
+  @import url('https://sdk.qcobjects.dev/css/basic-layout.css');
+  @import url('./doc/css/index.css');
+  @import url('./doc/css/theme/{{theme}}/style.css');
+
+  /* uncomment the next line to apply a theme */
+  /* @import url('css/theme/cyan/style.css'); */
+
+  footer {
+    border-radius: 100% 100% 0 0;
+    background: linear-gradient(315deg, #ffffff, #e6e6e6);
+    box-shadow: 2px 0px 9px #bfbfbf, 4px 6px 10px #ffffff;
+
+  }
+
+  body, header {
+    background-color: #f7f7f7 !important;
+  }
+
+  header {
+    background: linear-gradient(315deg, #ffffff, #e6e6e6) !important;
+  }
+  body {
+    background: linear-gradient(315deg, #ffffff, #e8e8e8) !important;
+  }
+
+  main {width:100%;min-height:120%;}
+  main > section{min-height:120%;}
+
+</style>
+
+<header>
+</header>
+<aside>
+  <component name="appbar" shadowed=true></component>
+</aside>
+  <main role="main">
+  <section>
+    <component name="contentblock">
+    </component>
+  </section>
+</main>
+<footer>
+  <component name="footer">
+    <routing path="#" name="footer"></routing>
+    <routing path="" name="footer"></routing>
+  </component>
+</footer>

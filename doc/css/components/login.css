@@ -1,0 +1,24 @@
+footer {
+  background: white;
+}
+
+#login_form_footer {
+  width: 50%;
+}
+
+.linkedin_button {
+  background-image: url('/img/signin_with_linkedin-buttons/Retina/Sign-In-Large---Active.png') !important;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: border-box;
+  max-width: 300px;
+  margin-right: 20px;
+  margin-left: 1px;
+}
+
+.login_button {
+  max-width: 300px;
+  margin-right: 20px;
+  margin-left: 1px;
+}

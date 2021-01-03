@@ -1,0 +1,234 @@
+/* NAV */
+nav {
+  float: left;
+  width: 0;
+  top: 0;
+  bottom: 0;
+  height: auto;
+  padding: 20px;
+}
+
+nav>component {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0 !important;
+  overflow-y: auto;
+  background-color: #f5f5f5 !important;
+  transition: 0.5s;
+  padding-top: 60px;
+  padding-bottom: 20%;
+}
+
+nav>component a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #505050;
+  display: block;
+  transition: 0.3s;
+}
+
+nav>component a:hover {
+  color: #252121;
+}
+
+nav summary {
+  outline: none;
+  list-style: none;
+  border: none;
+  white-space: nowrap;
+}
+
+nav summary::-webkit-details-marker {
+  display: none;
+}
+
+nav details summary {
+  cursor: pointer;
+}
+
+nav details {
+  margin-bottom: 7px;
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: white;
+  border-radius: 18px;
+}
+
+nav details:hover {
+  color: grey;
+}
+
+nav summary:before {
+  content: 'Q';
+  max-width: 20px;
+  /* the icon for list in sidebar */
+  color: #ffffff !important;
+  margin-right: 20px;
+}
+
+nav details ul {
+  padding: 15px 0 15px 0;
+  background-color: #f7f6f6 !important;
+  border-radius: 13px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px !important;
+}
+
+nav details ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  border-bottom: 1px solid white;
+}
+
+/**
+accordion style
+**/
+details {
+  border-radius: 4px;
+  padding: .5em .5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -.5em -.5em 0;
+  padding: .5em;
+}
+
+details[open] {
+  padding: .5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #e6e6e6 !important;
+  margin-bottom: .5em;
+}
+
+summary::-webkit-details-marker {
+  display: none
+}
+
+summary:after {
+  border-radius: 5px;
+  content: "+";
+  color: #111111;
+  float: left;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: -5px 10px 0 0;
+  padding: 0;
+  text-align: center;
+  width: 20px;
+}
+
+details[open] summary:after {
+  content: "-";
+}
+
+ul {
+  list-style-type: none;
+}
+
+/**
+end accordion style
+**/
+nav {
+  color: black;
+}
+
+nav {
+  text-align: justify;
+  z-index: 9;
+}
+
+nav>button.navbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #ffffff !important;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  top: 0;
+  left: 0;
+  position: fixed;
+  border-radius: 9px;
+  height: 60px;
+}
+
+nav>button.navbtn:after {
+  content: '\2630';
+}
+
+nav>component>span.closebtn {
+  position: fixed;
+  display: none;
+  top: 0;
+  max-width: 45px;
+  max-height: 45px;
+  border-radius: 50px;
+  right: 67%;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+nav>component>span.closebtn:after {
+  content: "\00d7";
+}
+
+nav .navcontent {
+  padding-top: 20px;
+}
+
+nav,
+article {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+/* END NAV */
+/* TOPNAV */
+nav>span.topnav {
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 70px;
+  background-color: #ffffff !important;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
+}
+
+nav .topnav a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  margin: 4px;
+  border-radius: 33px;
+  text-decoration: none;
+  font-size: 17px;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
+}
+
+nav .topnav a:hover {
+  border-radius: 33px;
+  background-color: #ffffff !important;
+  box-shadow: inset 6px 6px 38px #dedede,
+    inset -6px -6px 38px #ffffff;
+}
+
+nav .topnav .login-container {
+  float: right;
+}
+
+component[name=topmenu] {
+  position: absolute;
+  left: 55px;
+}

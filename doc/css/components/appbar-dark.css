@@ -1,0 +1,149 @@
+/* NAV */
+nav {
+  float: left;
+  width: 0;
+  top: 0;
+  bottom: 0;
+  height: auto;
+  padding: 20px;
+}
+
+nav>component {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  overflow-y: auto;
+  background-color: #111;
+  transition: 0.5s;
+  padding-top: 60px;
+  padding-bottom: 20%;
+}
+
+nav>component a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #ecffc7;
+  display: block;
+  transition: 0.3s;
+}
+
+nav>component a:hover {
+  color: #f1f1f1;
+}
+
+nav summary {
+  list-style: none;
+  border: none;
+  white-space: nowrap;
+}
+
+nav summary::-webkit-details-marker {
+  display: none;
+}
+
+nav details {
+  padding: 15px;
+  background-color: #222;
+  margin-bottom: 3px;
+}
+
+nav summary:before {
+  content: url('/img/Q_web.svg');
+  /* the icon for list in sidebar */
+  color: #e5f59d;
+  margin-right: 20px;
+
+}
+
+nav {
+  color: white;
+}
+
+nav {
+  text-align: justify;
+  z-index: 9;
+}
+
+nav>button.navbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+nav>button.navbtn:after {
+  content: '\2630';
+}
+
+nav>component>span.closebtn {
+  position: fixed;
+  display: none;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+nav>component>span.closebtn:after {
+  content: "\00d7";
+}
+
+
+nav .navcontent {
+  padding-top: 20px;
+
+}
+
+nav,
+article {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+/* END NAV */
+
+/* TOPNAV */
+nav>span.topnav {
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 70px;
+  background-color: #111;
+  overflow: hidden;
+}
+
+nav .topnav a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+}
+
+nav .topnav a:hover {
+  background-color: rgb(49, 45, 45);
+}
+
+
+nav .topnav .login-container {
+  float: right;
+}
+
+component[name=topmenu] {
+  position: absolute;
+  left: 40px;
+}

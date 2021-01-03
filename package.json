@@ -1,0 +1,13 @@
+{
+  "name": "live-demo",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "description": "This is a custom NPM template app from qcobjects-docs generated with QCObjects.",
+  "main": "js/init.js",
+  "license": "LGPL-3.0-or-later",
+  "dependencies": {
+    "qcobjects": "latest"
+  }
+}
