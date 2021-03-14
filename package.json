@@ -4,10 +4,18 @@
     "type": "git",
     "url": ""
   },
+  "scripts": {
+    "test": "(npx eslint doc/**/*.js --fix) && (npx jasmine)"
+  },
   "description": "This is a custom NPM template app from qcobjects-docs generated with QCObjects.",
   "main": "js/init.js",
   "license": "LGPL-3.0-or-later",
   "dependencies": {
     "qcobjects": "latest"
+  },
+  "devDependencies": {
+    "eslint": "^7.22.0",
+    "eslint-config-qcobjects": "0.0.6",
+    "jasmine": "^3.6.4"
   }
 }
