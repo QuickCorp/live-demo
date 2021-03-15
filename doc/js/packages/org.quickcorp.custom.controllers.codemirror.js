@@ -50,8 +50,9 @@ Import ("org.quickcorp.controllers.binding").then(function (){
             logger.debug("Something was wrong inserting the contextual fragment");
           }
         }
-
-        addContextualContent(Tag("iframe[name=result]").pop(), controller.component.data.content);
+        var ifr = Tag("iframe[name=result]").pop();
+        ifr.src = "";
+        addContextualContent(ifr, controller.component.data.content);
       },
       clipboard: function (){
         var controller = this;
