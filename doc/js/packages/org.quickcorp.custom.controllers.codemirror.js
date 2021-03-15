@@ -14,7 +14,7 @@ Import ("org.quickcorp.controllers.binding").then(function (){
         var controller = this;
         delete this.component.fieldType;
         this.component.createBindingEvents();
-        Tag('textarea[codemirror]').map((element)=>{
+        this.component.body.subelements('textarea[codemirror]').map((element)=>{
           controller.editor = CodeMirror.fromTextArea(element, {
             lineNumbers: true,
             styleActiveLine: true,
@@ -34,6 +34,24 @@ Import ("org.quickcorp.controllers.binding").then(function (){
       submit:function (){
         this.component.data._encoded_ = _Crypt.encrypt(this.component.data.content,this.component.data.passphrase);
         location.href="#result";
+      },
+      run () {
+        var controller = this;
+        // instance example: component.data
+        // propertyName example: "content"
+        // selectorName example: "iframe[name=result]"
+        // So the value of component.data.content will bind its changes to the selector iframe[name=result]
+        function addContextualContent (element, content){
+          try {
+            const scriptEl = document.createRange().createContextualFragment(content);
+            element.contentDocument.body.innerHTML = "";
+            element.contentDocument.body.append(scriptEl);
+          } catch (e){
+            logger.debug("Something was wrong inserting the contextual fragment");
+          }
+        }
+
+        addContextualContent(Tag("iframe[name=result]").pop(), controller.component.data.content);
       },
       clipboard: function (){
         var controller = this;

@@ -32,7 +32,15 @@ Package("org.quickcorp.custom.components",[
   Class ("LiveCodeComponent", Component, {
     name:"live-code",
     shadowed: false,
+    data: {},
     tplsource: "inline",
+    _new_ (o){
+      o.data.code = o.body.subelements(":scope > code").map((element) => {
+        return element.innerHTML
+      }).join("");
+      o.body.subelements(":scope > code").map(e=>{e.remove()});
+      _super_("Component", "_new_").call(this,o);
+    },
     template: `
     <style>
       @import url('./doc/css/github-style.css');
@@ -92,10 +100,10 @@ Package("org.quickcorp.custom.components",[
     <div class="container">
 
     <div class="livecode_grid" >
-      <component class="code_editor" name="{{editorname}}" componentClass="FormField" controllerClass="LiveCodeController">
+      <component class="code_editor" name="{{editorname}}" componentClass="FormField" controllerClass="LiveCodeController" data-code="{{code}}">
       </component>
       <div class="code_result">
-        <p><button onclick="location.href='#result'" >RUN</button></p>
+        <p><button onclick="global.liveCodeController.run()">RUN</button></p>
         <p></p>
       <iframe style="border:1px solid black; width:100%; height:70%" name="result" id="result" ></iframe>
       </div>
